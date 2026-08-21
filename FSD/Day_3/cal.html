@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SI & CI Calculator</title>
+    <link rel="stylesheet" href="cal.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Interest Calculator</h2>
+
+   <tr> 
+    <td><label>Principal Amount (₹)</label></td>
+    <td><input type="number" id="principal" placeholder="Enter Principal">
+    </td>
+</tr>
+
+    <tr>
+        <td><td><label>Rate of Interest (%)</label></td>
+    <td><input type="number" id="rate" placeholder="Enter Rate">
+    </td>
+</tr>
+ <tr>    
+<td>
+    <label>Time (Years)</label>
+    <input type="number" id="time" placeholder="Enter Time">
+ 
+    </td>
+    <td><button onclick="calculateSI()">Calculate Simple Interest</button></td>
+    <td><button onclick="calculateCI()">Calculate Compound Interest</button>
+</td>
+    <h3 id="result"></h3>
+</div>
+
+<script src="cal.js"></script>
+
+</body>
+</html>

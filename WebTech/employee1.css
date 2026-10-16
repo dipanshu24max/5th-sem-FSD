@@ -1,0 +1,8 @@
+employee{
+    background-color: bisque;
+}
+name, email{
+    font-size: 5px;
+    color: blue;
+    margin-left: 50px;
+}

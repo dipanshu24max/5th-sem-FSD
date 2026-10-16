@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ body{font-family:sans-serif; text-align:center; padding:20px}
+ input{padding:10px; width:200px}
+ button{padding:10px; margin:5px; cursor:pointer}
+ .stats{display:flex; justify-content:center; gap:10px; margin:15px}
+ .box{border:1px solid #333; padding:10px; width:80px}
+ .task{margin:5px}
+</style>
+</head>
+<body>
+<h2>Task Manager</h2>
+<input id="taskInput" placeholder="Enter Your Task">
+<button onclick="addTask()">Add Task</button>
+
+<div class="stats">
+  <div class="box"><div id="total">0</div>Total Task</div>
+  <div class="box"><div id="done">0</div>Completed</div>
+  <div class="box"><div id="pending">0</div>Pending</div>
+</div>
+
+<button onclick="filter='all'; render()">All</button>
+<button onclick="filter='pending'; render()">Pending</button>
+<button onclick="filter='completed'; render()">Completed</button>
+
+<div id="list" style="margin-top:20px; text-align:left; max-width:300px; margin-left:auto; margin-right:auto"></div>
+
+<script>
+let tasks = [{text:"ML Assignment", done:true}, {text:"Coding", done:true}];
+let filter='all';
+function addTask(){
+  let v=document.getElementById('taskInput').value;
+  if(!v) return;
+  tasks.push({text:v, done:false});
+  document.getElementById('taskInput').value='';
+  render();
+}
+function render(){
+  let html='';
+  tasks.forEach((t,i)=>{
+    if(filter=='completed' && !t.done) return;
+    if(filter=='pending' && t.done) return;
+    html+=`<div class="task"><input type="checkbox" ${t.done?'checked':''} onchange="tasks[${i}].done=!tasks[${i}].done; render()"> ${t.text}</div>`;
+  });
+  document.getElementById('list').innerHTML=html;
+  document.getElementById('total').innerText=tasks.length;
+  document.getElementById('done').innerText=tasks.filter(t=>t.done).length+;
+  document.getElementById('pending').innerText=tasks.filter(t=>!t.done).length;
+}
+render();
+</script>
+</body>
+</html>

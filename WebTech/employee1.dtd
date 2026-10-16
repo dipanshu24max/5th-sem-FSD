@@ -1,0 +1,3 @@
+<!ELEMENT employee (name,email)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT email (#PCDATA)>

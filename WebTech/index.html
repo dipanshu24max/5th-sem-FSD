@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border</title>
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+        }
+        section{
+            border: 2px solid black;
+            padding: 20px;
+            margin: 20px;
+            height: 150px;
+        }
+        /* background color */
+        .background-color{
+            background-color: lightblue;
+        }
+        /*background image*/
+        .background-image{
+            background-image: url('image1');
+        }
+        /* background position */
+        .background-position{
+            background-image: url(image);
+            background-position: right top;
+        }
+        /* background attachment */
+        .background-attachment{
+            background-image: url(image);
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>CSS Background Properties</h1>
+
+    <section class="background-color">
+        <h2>Background Color</h2>
+        <p>This section has a light blue background color.</p>
+    </section>
+
+    <section class="background-image">
+        <h2>Background Image</h2>
+        <p>This section has a background image.</p>
+    </section>
+
+    <section class="background-position">
+        <h2>Background Position</h2>
+        <p>This section has a background image positioned at the top right.</p>
+    </section>
+
+    <section class="background-attachment">
+        <h2>Background Attachment</h2>
+        <p>This section has a fixed background image that stays in place when scrolling.</p>
+    </section>
+    
+</body>
+</html>

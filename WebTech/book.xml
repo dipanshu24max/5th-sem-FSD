@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet type="text/css" href="book.css"?>
+<!DOCTYPE books SYSTEM "book.dtd">
+
+<books>
+    <book>
+        <bookname>physics</bookname>
+        <title>gff</title>
+        <author>hshd</author>
+        <publisher>ffh</publisher>
+        <edition>5</edition>
+        <price>567</price>
+    </book>
+</books>

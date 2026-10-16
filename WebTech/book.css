@@ -1,0 +1,18 @@
+books{
+      color: blueviolet;
+      background-color:maroon;
+      width: 100%;
+}
+heading{
+         color: black;
+         font-size: 40px;
+         background-color: brown;
+}
+heading, title author ,pulishour, edition price{
+    display: block;
+}
+title{
+     font-size: 25px;
+     font-weight: bold;
+
+}
